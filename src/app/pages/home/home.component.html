@@ -1,0 +1,40 @@
+<div class="hc-container">
+  <div class="hc-header">
+    <img src="../../../assets/images/logo.svg" alt="logo" width="90">
+    <div></div>
+    <p>{{ authService.getUsername() | titlecase }}</p>
+    <p (click)="logout()">Desconectar</p>
+  </div>
+
+  <div class="hc-body">
+    <div class="hc-body-header">
+      <p>Consulta Clínica</p>
+      <button (click)="openNewAppointmentModal()">
+        <img src="../../../assets/icons/add-white.svg" alt="adicionar">
+        <span>Nova Consulta</span>
+      </button>
+    </div>
+
+    <div class="hc-body-table">
+      <div class="hc-body-table-header">
+        <p>Especialidade</p>
+        <p>Profissional</p>
+        <p>Data</p>
+        <p>Hora</p>
+      </div>
+
+      <div class="hc-body-table-row" *ngFor="let appointment of appointments">
+        <p>{{ appointment.doctor.specialty.name }}</p>
+        <p>{{ appointment.doctor.name }}</p>
+        <p>{{ appointment.day+"T00:00:00" | date:"dd/mm/yyyy" }}</p>
+        <p>{{ appointment.hour }}</p>
+        <div class="hc-body-table-row-actions" (click)="deleteAppointment(appointment.id)">
+          <img src="../../../assets/icons/close-primary.svg" alt="desmarcar">
+          <p>Desmarcar</p>
+        </div>
+      </div>
+
+      <p *ngIf="appointments?.length === 0" class="hc-empty-message">Ainda não há nenhuma consulta marcada.<br/>Clique no botão <strong>Nova Consulta</strong> para marcar.</p>
+    </div>
+  </div>
+</div>

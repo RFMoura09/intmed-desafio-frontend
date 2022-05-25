@@ -1,0 +1,24 @@
+.ap-title {
+  font-weight: 700;
+  color: var(--black);
+  font-size: 18px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+input[type="password"] {
+  margin-bottom: 20px;
+}
+
+.ap-input-area {
+  position: relative;
+}
+
+.error-message {
+  position: absolute;
+  z-index: 99;
+  left: 14px;
+  top: calc(32px);
+  font-size: 10px;
+  color: var(--error);
+}

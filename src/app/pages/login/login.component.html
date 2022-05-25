@@ -1,0 +1,19 @@
+<div class="center-container">
+  <div class="default-content" [formGroup]="loginFG">
+    <img src="../../../assets/images/logo.svg" alt="logo">
+    <input type="text" placeholder="Email ou Login" formControlName="user">
+    <input type="password" placeholder="Senha" formControlName="password">
+    <label class="lp-content-checkbox-area">
+      <input type="checkbox">
+      <span>Lembrar minha senha</span>
+    </label>
+    <div class="content-footer">
+      <button class="btn-secondary" (click)="goToAccount()">
+        Criar Conta
+      </button>
+      <button (click)="login()" [disabled]="loginFG.invalid">
+        Acessar
+      </button>
+    </div>
+  </div>
+</div>

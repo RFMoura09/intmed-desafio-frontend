@@ -1,0 +1,31 @@
+<div class="center-container">
+  <div class="default-content" [formGroup]="accountFG">
+    <img src="../../../assets/images/logo.svg" alt="logo">
+    <p class="ap-title">Crie sua conta</p>
+    <div class="ap-input-area">
+      <input type="text" placeholder="Nome" formControlName="name">
+      <p class="error-message" *ngIf="fieldHasError('name')">Este campo é obrigatório</p>
+    </div>
+    <div class="ap-input-area">
+      <input type="text" placeholder="Email" formControlName="email">
+      <p class="error-message" *ngIf="fieldHasError('email')">Email inválido</p>
+    </div>
+    <div class="ap-input-area">
+      <input type="password" placeholder="Senha" [style.margin-bottom.px]="20" formControlName="password">
+      <p class="error-message" *ngIf="fieldHasError('password')">Este campo é obrigatório</p>
+    </div>
+    <div class="ap-input-area">
+      <input type="password" placeholder="Confirmar Senha" [style.margin-bottom.px]="0" formControlName="repeatPassword">
+      <p class="error-message" *ngIf="fieldHasError('repeatPassword')">Este campo é obrigatório</p>
+    </div>
+    <div class="content-footer">
+      <button class="btn-secondary" (click)="goToLogin()">
+        Cancelar
+      </button>
+      <button [disabled]="!isEnabledSubmitButton()" (click)="addUser()">
+        Confirmar
+      </button>
+    </div>
+  </div>
+</div>
+

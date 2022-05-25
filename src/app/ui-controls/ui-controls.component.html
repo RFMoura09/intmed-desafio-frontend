@@ -1,0 +1,8 @@
+<app-new-appointment-modal
+  *ngIf="(uiService.newAppointmentModalSubject | async)?.open"
+>
+</app-new-appointment-modal>
+
+<app-loader *ngIf="uiService.loaderSubject | async"></app-loader>
+
+<app-toast *ngIf="showToast" [message]="toastContent?.message ?? ''" [messageType]="toastContent?.messageType ?? 0"></app-toast>

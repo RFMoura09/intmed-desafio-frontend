@@ -1,1 +1,112 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --gray2: #a8a8a8;
+  --primary: #49b4bb;
+  --primary-alt: #90d3d7;
+  --white: #fff;
+  --black: #444444;
+  --gray1: #f8f8f8;
+  --error: #f00050;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  color: var(--black);
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  border: none;
+  background-color: var(--primary);
+  border-radius: 8px;
+  color: var(--white);
+  padding: 10px 20px;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:disabled {
+    background-color: var(--primary-alt);
+    pointer-events: none;
+  }
+}
+
+.btn-secondary {
+  color: var(--primary);
+  background-color: var(--white);
+}
+
+input[type="text"],
+input[type="password"],
+select {
+  border: 1px solid var(--gray2);
+  border-radius: 4px;
+  outline: none;
+  padding: 8px 12px;
+  width: calc(100% - 25px);
+
+  &::placeholder {
+    color: var(--gray2);
+  }
+}
+
+select {
+  width: 100%;
+  cursor: pointer;
+
+  option:disabled {
+    color: var(--gray2);
+  }
+}
+
+.center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  color: var(--gray2);
+
+  .default-content {
+    width: calc((100% / 12) * 4);
+
+    img {
+      display: block;
+      margin-bottom: 40px;
+    }
+
+    // input[type="text"],
+    // input[type="password"] {
+    //   display: block;
+    // }
+
+    input[type="text"] {
+      margin-bottom: 20px;
+    }
+
+    input[type="password"] {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.content-footer {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  width: 100%;
+}
+
+@keyframes spin {
+  from {
+    transform: scale(0.6) rotate(0deg);
+  }
+  to {
+    transform: scale(0.6) rotate(360deg);
+  }
+}

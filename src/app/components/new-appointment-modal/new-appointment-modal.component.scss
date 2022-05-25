@@ -1,0 +1,24 @@
+.modal-container {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: var(--white);
+  padding: 40px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: var(--black);
+}
+
+select {
+  margin-bottom: 20px;
+}

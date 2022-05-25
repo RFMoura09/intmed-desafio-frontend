@@ -1,0 +1,41 @@
+<div class="center-container modal-container" (click)="closeModal()">
+  <div
+    class="default-content modal-content"
+    [formGroup]="newAppointmentFG"
+    (click)="$event.stopPropagation()"
+  >
+    <p class="title">Nova Consulta</p>
+    <select formControlName="specialty">
+      <option selected disabled>Especialidade</option>
+      <option [ngValue]="specialty.name" *ngFor="let specialty of specialties">
+        {{ specialty.name }}
+      </option>
+    </select>
+    <select formControlName="doctor">
+      <option selected disabled>Médico</option>
+      <option [ngValue]="doctor.name" *ngFor="let doctor of doctors">
+        {{ doctor.name }}
+      </option>
+    </select>
+    <select formControlName="day">
+      <option selected disabled>Data</option>
+      <option [ngValue]="day" *ngFor="let day of days">
+        {{ day }}
+      </option>
+    </select>
+    <select style="margin-bottom:0" formControlName="hour">
+      <option selected disabled>Hora</option>
+      <option [ngValue]="hour" *ngFor="let hour of hours">
+        {{ hour }}
+      </option>
+    </select>
+    <div class="content-footer">
+      <button class="btn-secondary" (click)="closeModal()">
+        Cancelar
+      </button>
+      <button [disabled]="isSubmitButtonDisabled()" (click)="addAppointment()">
+        Confirmar
+      </button>
+    </div>
+  </div>
+</div>

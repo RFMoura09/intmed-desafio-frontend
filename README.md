@@ -5,6 +5,7 @@ Projeto desenvolvido em **Angular v.13.3.3**.
 ## Instruções
 
 Para rodar o projeto, basta digitar `ng serve`.
+Se está utilizando pela primeira vez, rode o comando `npm install` primeiro.
 
 ## Observações
 

@@ -80,11 +80,6 @@ export class NewAppointmentModalComponent implements OnInit {
         this.selectedSchedule = this.schedules.find(
           (s) => s.day === this.newAppointmentFG.get('day')?.value
         )?.id!;
-
-        console.log({
-          scheduleId: this.selectedSchedule,
-          hour: this.newAppointmentFG.get('hour')?.value as string,
-        });
       });
   }
 

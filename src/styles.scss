@@ -110,3 +110,19 @@ select {
     transform: scale(0.6) rotate(360deg);
   }
 }
+
+@media (max-width: 960px) {
+  .center-container {
+    .default-content {
+      width: calc((100% / 12) * 6);
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .center-container {
+    .default-content {
+      width: calc(100% - 60px);
+    }
+  }
+}

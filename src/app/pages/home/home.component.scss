@@ -98,3 +98,23 @@
     line-height: 18px;
   }
 }
+
+@media (max-width: 960px) {
+  .hc-container {
+    width: calc(100% / 12 * 10);
+  }
+}
+
+@media (max-width: 640px) {
+  .hc-container {
+    width: calc(100% - 60px);
+
+    .hc-body {
+      width: 627px;
+
+      .hc-body-header {
+        width: 80vw;
+      }
+    }
+  }
+}
